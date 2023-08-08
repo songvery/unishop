@@ -40,7 +40,12 @@
 </template>
 
 <script>
+	// 导入自己封装的mixin模块
+	import badgeMixin from '@/mixins/tabbar-badge.js';
+	
 	export default {
+		// 将badgeMxin混入到当前的页面中使用
+		mixins:[badgeMixin],
 		data() {
 			return {
 				// 窗口的可用高度=屏幕高度-navigationBar高度-tabBar高度-自定义的Search组件高度
